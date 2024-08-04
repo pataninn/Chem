@@ -1,0 +1,336 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Teko';
+}
+body, html {
+  height: 100%;
+  margin: 0;
+ /* font-family: Arial, Helvetica, sans-serif;*/
+}
+.header{
+  padding: 5px 15px;
+  background: #c7aa1b;
+  color: #ffffff;
+  position: relative;
+}
+.content {
+  padding: 16px;
+}
+  
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+  
+
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img{
+  width: 150px;
+
+}
+
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+
+}
+
+.nav-links ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+
+}
+
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: red;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+  width: 100%;
+
+}
+
+.text-box{
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+
+}
+
+.text-box h1{
+  font-size: 60px;
+}
+
+.text-box p{
+  margin-top: 10px 0 40px;
+  font-size: 20px;
+  color: #fff;
+
+}
+
+nav .fa{
+  display: none;
+}
+
+
+@media(max-width:775px){
+
+    .text-box h1{
+      font-size: 20px;
+    }
+
+    .nav-links ul li{
+      display: block;
+    }
+    .nav-links{
+      position: absolute;
+      background: rgb(14, 14, 82);
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+    }
+    nav .fa{
+      display: block;
+      color: #fff;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .nav-links ul{
+      padding: 30px;
+    }
+
+
+}
+
+
+/******************************************************************/
+
+
+.container {
+  display: flex;
+  padding-right: 15px;
+}
+
+
+/* The sidebar menu */
+/*
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height 
+  width: 100px; /* Set the width of the sidebar 
+  /*position: fixed; /* Fixed Sidebar (stay in place on scroll) 
+  z-index: 1; /* Stay on top 
+  top: 0; /* Stay at the top 
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll 
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+/* The navigation menu links 
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a.active {
+  font-weight: bold;
+  color: #4a222a;
+}
+
+/* When you mouse over the navigation links, change their color 
+.sidenav a:hover {
+  color: black;
+}
+
+*/
+
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/Chem_Lab.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-container {
+  display: flex;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+
+.introduce{
+  padding-top: 20px;
+}
+.introduce .text{
+  padding-bottom: 10px;
+}
+
+iframe {
+  display: block;
+  margin: auto;
+}
+
+
+/******************************************************/
+
+h2{
+  padding-top: 20px;
+
+  text-align: center;
+}
+.gallery {
+    border: 1px solid #ccc;
+    transition: 0.3s;
+  }
+  
+.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 10px 5px;
+    float: left;
+    width: 19.99999%;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  
+  @media only screen and (max-width: 850px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+
+.clearfix {
+  clear: both;
+}
+
+.footer{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer a:link{
+  color: black;
+  text-decoration: none;
+}
+
+.footer a:hover{
+  color:chocolate;
+
+}
+
+/*******************************************************/
+.research{
+  flex: 1;
+  /*margin-left: 160px;*/
+  padding: 16px 30px;
+
+}
+.research h1{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+}
+.box img {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Set a fixed height to maintain aspect ratio */
+  object-fit: cover; /* Use object-fit to maintain aspect ratio */
+  margin-right: 10px;
+}
+.description {
+  flex-grow: 1;
+}
